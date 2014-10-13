@@ -8,7 +8,7 @@ import org.shekhar.algorithms.ch3.ResizingArrayStack;
 public class Problem_1_3_8 {
 
     public static void main(String[] args) {
-        String input = "it was - the best - of times - - - it was - the - -";
+        String input = "it was - the best - iter times - - - it was - the - -";
         ResizingArrayStack<String> stack = new ResizingArrayStack<>();
         for (String val : input.split("\\s")) {
             if(!val.equals("-")){

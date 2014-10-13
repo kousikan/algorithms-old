@@ -8,7 +8,7 @@ import org.shekhar.algorithms.ch3.Stack;
 public class Problem_1_3_2 {
 
     public static void main(String[] args) {
-        String input = "it was - the best - of times - - - it was - the - -";
+        String input = "it was - the best - iter times - - - it was - the - -";
         Stack<String> stack = new Stack<>();
         for (String item : input.split("\\s")) {
             if (!item.equals("-")) {

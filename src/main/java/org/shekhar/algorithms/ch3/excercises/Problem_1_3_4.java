@@ -3,8 +3,6 @@ package org.shekhar.algorithms.ch3.excercises;
 import org.shekhar.algorithms.ch3.Stack;
 import org.shekhar.algorithms.ch3.Strings;
 
-import java.util.Arrays;
-
 /**
  * Created by shekhargulati on 10/13/2014.
  */
@@ -26,7 +24,7 @@ public class Problem_1_3_4 {
     }
 
     private static boolean isBalancedExpression(String text) {
-        Strings input = new Strings(text);
+        Strings input = Strings.iter(text);
         Stack<String> stack = new Stack<>();
 
         for (String item : input) {

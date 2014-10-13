@@ -9,9 +9,14 @@ public class Strings implements Iterable<String> {
 
     private final String input;
 
-    public Strings(String input) {
+    private Strings(String input) {
         this.input = input;
     }
+
+    public static Strings iter(String input) {
+        return new Strings(input);
+    }
+
 
     @Override
     public Iterator<String> iterator() {
@@ -34,7 +39,7 @@ public class Strings implements Iterable<String> {
     }
 
     public static void main(String[] args) {
-        Strings myString = new Strings("SHEKHAR");
+        Strings myString = iter("SHEKHAR");
         for (String s : myString) {
             System.out.println(s);
         }
