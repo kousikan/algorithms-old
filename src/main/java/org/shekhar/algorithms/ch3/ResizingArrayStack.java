@@ -38,6 +38,10 @@ public class ResizingArrayStack<T> implements Iterable<T> {
         return this.N == 0;
     }
 
+    public int arraySize() {
+        return this.items.length;
+    }
+
     @Override
     public Iterator<T> iterator() {
         return new ReverseArrayIterator();
@@ -67,7 +71,7 @@ public class ResizingArrayStack<T> implements Iterable<T> {
             System.out.println(name);
         }
 
-        while (stack.size() > 0){
+        while (stack.size() > 0) {
             System.out.println(stack.pop());
         }
 

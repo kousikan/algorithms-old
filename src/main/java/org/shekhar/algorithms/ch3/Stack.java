@@ -41,6 +41,10 @@ public class Stack<T> implements Iterable<T> {
         return item;
     }
 
+    public T peek() {
+        return this.first.item;
+    }
+
     public int size() {
         return this.N;
     }
