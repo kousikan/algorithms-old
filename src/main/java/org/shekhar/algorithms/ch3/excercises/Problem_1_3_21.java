@@ -29,6 +29,16 @@ public class Problem_1_3_21 {
         return false;
     }
 
+    public static <T> void removeAfter(Node<T> previous) {
+        previous.next = previous.next.next;
+    }
+
+    public static <T> void addAfter(Node<T> first, Node<T> second) {
+        Node<T> oldFirst = first.next;
+        first.next = second;
+        second.next = oldFirst;
+    }
+
     public static void main(String[] args) {
         Node<String> users = new Node<>("shekhar");
         Node<String> rahul = new Node("rahul");
@@ -36,7 +46,24 @@ public class Problem_1_3_21 {
         Node<String> sameer = new Node("sameer");
         rahul.next = sameer;
 
-        System.out.println(contains(users, "sameer"));
+//        System.out.println(contains(users, "sameer"));
+
+        // insert guneet before rahul
+        Node<String> guneet = new Node<>("guneet");
+//
+//        guneet.next = users.next;
+//        users.next = guneet;
+//
+
+//        removeAfter(rahul);
+
+        addAfter(rahul, guneet);
+        Node start = users;
+        while (start != null) {
+            System.out.println(start.item);
+            start = start.next;
+
+        }
 
     }
 }
